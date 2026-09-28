@@ -23,7 +23,7 @@
 <style>
 html,body{margin:0;min-height:100%;background:#16181c;color:#eeeae3;font:16px/1.5 -apple-system,system-ui,sans-serif}
 main{max-width:420px;margin:0 auto;padding:48px 20px;display:flex;flex-direction:column;gap:16px;align-items:center;text-align:center}
-img{width:120px;height:120px;border-radius:26px}
+svg{display:block}
 h1{margin:0;font:600 30px/1.1 Georgia,serif}
 p{margin:0;color:#c6c0b5}
 a.go{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:99px;background:#1baf7a;color:#0d1f18;font-weight:600;text-decoration:none}
@@ -33,7 +33,27 @@ a.go{display:inline-flex;align-items:center;justify-content:center;min-height:48
 </head>
 <body>
 <main>
-  <img src="icon-512.png" alt="">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="120" height="120" role="img" aria-label="All the Way Back icon" style="border-radius:26px">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#171a24"/><stop offset=".62" stop-color="#2a2238"/><stop offset="1" stop-color="#5a3a44"/></linearGradient>
+    <linearGradient id="beam" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#fff4c2" stop-opacity="1"/><stop offset=".6" stop-color="#ffe98a" stop-opacity=".7"/><stop offset="1" stop-color="#ffe98a" stop-opacity="0"/></linearGradient>
+    <filter id="glow" x="-80%" y="-10%" width="260%" height="120%"><feGaussianBlur stdDeviation="14"/></filter>
+    <pattern id="win" width="22" height="26" patternUnits="userSpaceOnUse"><rect width="22" height="26" fill="#3a3f48"/><rect x="6" y="6" width="8" height="10" fill="#5b6270"/></pattern>
+    <pattern id="winY" width="22" height="26" patternUnits="userSpaceOnUse"><rect width="22" height="26" fill="#3a3f48"/><rect x="6" y="6" width="8" height="10" fill="#f2c14e"/></pattern>
+  </defs>
+  <rect width="512" height="512" fill="url(#sky)"/>
+  <circle cx="96" cy="84" r="3" fill="#eeeae3" opacity=".8"/><circle cx="400" cy="70" r="2.4" fill="#eeeae3" opacity=".7"/><circle cx="300" cy="120" r="2" fill="#eeeae3" opacity=".6"/>
+  <path d="M0 360 L0 250 L70 190 L130 236 L220 128 L290 212 L340 182 L420 250 L512 214 L512 360 Z" fill="#343a52"/>
+  <rect x="104" y="80" width="130" height="330" fill="url(#beam)" filter="url(#glow)" opacity=".75"/>
+  <rect x="124" y="80" width="90" height="330" fill="url(#beam)"/>
+  <rect x="118" y="394" width="102" height="16" rx="3" fill="#4a4f58"/>
+  <rect x="250" y="252" width="74" height="158" fill="url(#winY)"/>
+  <rect x="340" y="196" width="74" height="214" fill="url(#win)"/>
+  <rect x="430" y="140" width="74" height="270" fill="url(#win)"/>
+  <rect x="0" y="410" width="512" height="102" fill="#26292f"/>
+  <rect x="104" y="398" width="130" height="12" fill="#1baf7a"/>
+  <line x1="0" x2="512" y1="300" y2="300" stroke="#7fe0b5" stroke-width="4" stroke-dasharray="16 14" opacity=".75"/>
+</svg>
   <h1>All the Way Back</h1>
   <p>Every pre-break record, taken back one run at a time.</p>
   <a class="go" id="go" href="https://script.google.com/macros/s/AKfycbyMyI9Umo7srKtXNNq2Ftxn0RX61SYXcWc4hzgD9nL675t4JBwlg_AeZus1T-CqIEHfvA/exec">Open</a>
